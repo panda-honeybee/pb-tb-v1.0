@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Expample Template"
+title:  "Example Template"
 date:   2025-02-23 18:52:34 -0800
 categories: Test
 comments: 1

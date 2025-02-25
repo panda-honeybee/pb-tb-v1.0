@@ -34,7 +34,7 @@ paginate: 5
 # Build settings
 
 
-categories: DDIA LeetCode Test
+categories: DDIA LeetCode Test System-Design
 markdown: kramdown
 gems:
   - jekyll-feed
