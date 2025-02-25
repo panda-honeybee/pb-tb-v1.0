@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "/pb-tb-v1" # the subpath of your site, e.g. /blog
+baseurl: "/pb-tb-v1.0" # the subpath of your site, e.g. /blog
 url: "https://panda-honeybee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Panda-Bee
 github_username:  jekyll
@@ -34,8 +34,7 @@ paginate: 5
 # Build settings
 
 
-categories: DDIA LeetCode TestCate
-tags: Test1 Test2
+categories: DDIA LeetCode Test
 markdown: kramdown
 gems:
   - jekyll-feed
