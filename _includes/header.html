@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-      {% if page.title %}
-      {{ page.title | escape }}
-      {% else %}
-      {{ site.title | escape }}
-      {% endif %}
-    </title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/res/favicons.ico">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
-    {% for css in layout.css %}
-    {% if css contains "//" %}
-    <link rel="stylesheet" href="{{css}}">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {% if page.title %}
+    {{ page.title | escape }}
     {% else %}
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
+    {{ site.title | escape }}
     {% endif %}
-    {% endfor %}
-    {% for css in page.css %}
-    {% if css contains "//" %}
-    <link rel="stylesheet" href="{{css}}">
-    {% else %}
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
-    {% endif %}
-    {% endfor %}
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css">
-
-    {% seo title=false %}
-  </head>
-  <body>
-    <header>
-      <nav class="top-nav teal">
-        <div class="nav-wrapper light-blue darken-3">
-          <div class="container ">
-            <a class="page-title" href="{{site.baseurl}}/">{{site.title}}</a>
-          </div>
+  </title>
+  <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/res/favicons.ico">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+  {% for css in layout.css %}
+  {% if css contains "//" %}
+  <link rel="stylesheet" href="{{css}}">
+  {% else %}
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
+  {% endif %}
+  {% endfor %}
+  {% for css in page.css %}
+  {% if css contains "//" %}
+  <link rel="stylesheet" href="{{css}}">
+  {% else %}
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
+  {% endif %}
+  {% endfor %}
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  {% seo title=false %}
+</head>
+<body>
+  <header>
+    <nav class="top-nav teal">
+      <div class="nav-wrapper light-blue darken-3">
+        <div class="container ">
+          <a class="page-title" href="{{site.baseurl}}/">{{site.title}}</a>
         </div>
-      </nav>
-      <div class="container">
-        <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
-          <i class="material-icons">menu</i>
-        </a>
       </div>
-      <ul id="slide-out" class="side-nav fixed">
-        <li>
-          <div class="userView">
-            <div class="background"></div>
-            <a href="{{site.github_profile}}" target="_blank"><img class="circle z-depth-2 responsive-img" style="width: 100px; height: 100px;" src="{{site.baseurl}}/assets/res/pbl.png"></a>
-            <span class="white-text name"></span>
-            <span class="white-text email"></span>
-          </div>
-        </li>
-        <li><a class="waves-effect" href="{{site.baseurl}}/"><i class="material-icons">dashboard</i>Home</a></li>
-        <li><a class="waves-effect" href="{{site.baseurl}}/categories"><i class="material-icons">storage</i>Categories</a></li>
-        <li><div class="divider"></div></li>
-        <li><a class="waves-effect" href="{{site.baseurl}}/about"><i class="material-icons">person</i>About</a></li>
-      </ul>
-    </header>
-    <main>
+    </nav>
+    <div class="container">
+      <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+    <ul id="slide-out" class="side-nav fixed">
+      <li>
+        <div class="userView">
+          <div class="background"></div>
+          <a href="{{site.github_profile}}" target="_blank"><img class="circle z-depth-2 responsive-img" style="width: 100px; height: 100px;" src="{{site.baseurl}}/assets/res/pbl.png"></a>
+          <span class="white-text name"></span>
+          <span class="white-text email"></span>
+        </div>
+      </li>
+      <li><a class="waves-effect" href="{{site.baseurl}}/"><i class="material-icons">dashboard</i>Home</a></li>
+      <li><a class="waves-effect" href="{{site.baseurl}}/categories"><i class="material-icons">storage</i>Categories</a>
+      </li>
+      <li><a class="waves-effect" href="{{site.baseurl}}/quizlist"><i class="material-icons">table</i>QuizList</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a class="waves-effect" href="{{site.baseurl}}/about"><i class="material-icons">person</i>About</a></li>
+    </ul>
+  </header>
+  <main>

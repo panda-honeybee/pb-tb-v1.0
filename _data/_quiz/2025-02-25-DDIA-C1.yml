@@ -1,0 +1,223 @@
+title: DDIA Charpter 1
+randomized: false
+questions:
+
+- question: "What are the three key concerns when designing data-intensive applications?"
+  items:
+    - choice: "Performance, Security, Reliability"
+      correct: false
+    - choice: "Scalability, Maintainability, Reliability"
+      correct: true
+    - choice: "Durability, Throughput, Efficiency"
+      correct: false
+    - choice: "Security, Latency, Cost"
+      correct: false
+
+- question: "What does reliability in a data system mean?"
+  items:
+    - choice: "The system can handle sudden increases in workload"
+      correct: false
+    - choice: "The system protects against unauthorized access"
+      correct: false
+    - choice: "The system continues to work correctly even when faults occur"
+      correct: true
+    - choice: "The system is optimized for speed"
+      correct: false
+
+- question: "What is the primary cause of system faults?"
+  items:
+    - choice: "Hardware failures"
+      correct: false
+    - choice: "Software bugs and human errors"
+      correct: true
+    - choice: "Network issues"
+      correct: false
+    - choice: "Power outages"
+      correct: false
+
+- question: "What is the best strategy to handle hardware failures in a distributed system?"
+  items:
+    - choice: "Design the system assuming hardware will never fail"
+      correct: false
+    - choice: "Use redundancy and replication"
+      correct: true
+    - choice: "Avoid using commodity hardware"
+      correct: false
+    - choice: "Increase CPU and RAM capacity"
+      correct: false
+
+- question: "What does scalability refer to in a data system?"
+  items:
+    - choice: "The ability of a system to handle growing amounts of work"
+      correct: true
+    - choice: "The system’s ability to handle security threats"
+      correct: false
+    - choice: "The system’s efficiency in processing user requests"
+      correct: false
+    - choice: "The time it takes for a system to recover from failures"
+      correct: false
+
+- question: "Which approach describes scaling by adding more machines to distribute the load?"
+  items:
+    - choice: "Vertical scaling"
+      correct: false
+    - choice: "Horizontal scaling"
+      correct: true
+    - choice: "Monolithic scaling"
+      correct: false
+    - choice: "Serverless scaling"
+      correct: false
+
+- question: "What is an example of an approach to maintainability?"
+  items:
+    - choice: "Implementing a microservices architecture"
+      correct: true
+    - choice: "Optimizing for the lowest latency possible"
+      correct: false
+    - choice: "Keeping all system logic in a single monolithic application"
+      correct: false
+    - choice: "Avoiding code documentation for faster development"
+      correct: false
+
+- question: "What is a characteristic of an ACID-compliant database?"
+  items:
+    - choice: "It prioritizes speed over consistency"
+      correct: false
+    - choice: "It ensures transactions remain reliable even in case of failures"
+      correct: true
+    - choice: "It sacrifices durability to increase scalability"
+      correct: false
+    - choice: "It allows partial updates to be committed"
+      correct: false
+
+- question: "In a distributed system, which type of failure is the most difficult to handle?"
+  items:
+    - choice: "CPU overheating"
+      correct: false
+    - choice: "Disk corruption"
+      correct: false
+    - choice: "Network partitioning"
+      correct: true
+    - choice: "Power failure"
+      correct: false
+
+- question: "Which of the following is NOT a common database model?"
+  items:
+    - choice: "Relational"
+      correct: false
+    - choice: "Graph"
+      correct: false
+    - choice: "Blockchain"
+      correct: true
+    - choice: "Document"
+      correct: false
+
+- question: "What is an example of a batch processing system?"
+  items:
+    - choice: "A real-time chat application"
+      correct: false
+    - choice: "A data pipeline that processes logs every night"
+      correct: true
+    - choice: "A stock trading application"
+      correct: false
+    - choice: "A streaming video service"
+      correct: false
+
+- question: "Which of the following is a benefit of event-driven architecture?"
+  items:
+    - choice: "It reduces the need for scalability"
+      correct: false
+    - choice: "It eliminates the need for databases"
+      correct: false
+    - choice: "It allows components to operate independently"
+      correct: true
+    - choice: "It simplifies debugging"
+      correct: false
+
+- question: "What is a common tradeoff in CAP theorem?"
+  items:
+    - choice: "You must sacrifice either consistency, availability, or partition tolerance"
+      correct: true
+    - choice: "You can achieve all three: consistency, availability, and partition tolerance"
+      correct: false
+    - choice: "The system becomes less reliable when partition tolerance is prioritized"
+      correct: false
+    - choice: "None of the above"
+      correct: false
+
+- question: "In a distributed database, what does consistency mean?"
+  items:
+    - choice: "All nodes always have exactly the same data at any moment"
+      correct: true
+    - choice: "The system is resistant to network failures"
+      correct: false
+    - choice: "The database can handle multiple concurrent users"
+      correct: false
+    - choice: "The database runs faster under high load"
+      correct: false
+
+- question: "What is an eventual consistency model?"
+  items:
+    - choice: "A model where all reads return the most recent write immediately"
+      correct: false
+    - choice: "A model where a system guarantees consistency after some time"
+      correct: true
+    - choice: "A model that prioritizes low latency over data accuracy"
+      correct: false
+    - choice: "A model that prevents network partitions"
+      correct: false
+
+- question: "What type of database is best suited for handling highly connected data, such as social networks?"
+  items:
+    - choice: "Relational database"
+      correct: false
+    - choice: "Document store"
+      correct: false
+    - choice: "Graph database"
+      correct: true
+    - choice: "Key-value store"
+      correct: false
+
+- question: "What is a drawback of using a key-value store?"
+  items:
+    - choice: "It does not support schema evolution"
+      correct: false
+    - choice: "It lacks structured querying like SQL"
+      correct: true
+    - choice: "It cannot handle large datasets"
+      correct: false
+    - choice: "It requires a high level of normalization"
+      correct: false
+
+- question: "What is an advantage of using NoSQL databases over relational databases?"
+  items:
+    - choice: "NoSQL databases are always more consistent"
+      correct: false
+    - choice: "NoSQL databases provide a predefined schema"
+      correct: false
+    - choice: "NoSQL databases are more flexible and scalable"
+      correct: true
+    - choice: "NoSQL databases guarantee ACID compliance"
+      correct: false
+
+- question: "What does sharding do in a database system?"
+  items:
+    - choice: "Distributes data across multiple nodes to improve scalability"
+      correct: true
+    - choice: "Ensures every transaction is ACID compliant"
+      correct: false
+    - choice: "Reduces storage requirements by compressing data"
+      correct: false
+    - choice: "Increases latency for read-heavy workloads"
+      correct: false
+
+- question: "What is the main challenge of distributed systems?"
+  items:
+    - choice: "They require more CPU power"
+      correct: false
+    - choice: "They are difficult to scale"
+      correct: false
+    - choice: "They introduce complexities like network failures and data consistency issues"
+      correct: true
+    - choice: "They are slower than monolithic systems"
+      correct: false

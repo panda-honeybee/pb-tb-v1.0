@@ -1,0 +1,19 @@
+<div class="col s12 cat-div">
+    <div class="divider"></div>
+    <div class="cat-index">
+        {% for t in site.tags %}
+        {% if t[0]== "quiz" %}
+        <ul class="cat-post">
+            {% for post in t[1] %}
+            <a class="post-title" href="{{site.baseurl}}{{post.url}}" target="_blank">
+                <li class="quiz-item">
+                    {{post.title}}
+                    <small class="post-date">{{post.date | date_to_string}}</small>
+                </li>
+            </a>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

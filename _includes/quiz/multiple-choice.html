@@ -1,0 +1,9 @@
+<div class="admonition">
+    <p class="mcq-title">{% if include.item.question %}{{ include.item.question }}{% else %}Question {{
+        include.count }}{% endif %}</p>
+    <p>{% for choice in include.item.items %}{% if choice.correct == true %}<span class="correct-{{ include.count }}">{%
+            endif %}{{ forloop.index }}. {{ choice.choice }}{% if choice.correct == true %}</span>{% endif %}<br>{%
+        endfor %}</p>
+</div><button class="btn" onclick='$(".correct-{{ include.count }}").css( {"font-weight": "800",
+        "color": "blue"});'>Show
+    Answer</button>

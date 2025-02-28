@@ -1,0 +1,9 @@
+<div class="col s12 tag-div">
+    <div class="container quiz-container user-content">
+        <div class="">
+            {% if quiz.randomize == true %}{% assign questions = quiz.questions | sample %}{% else %}{% assign questions
+            = quiz.questions %}{% endif %}{% for item in questions %}
+            {% include quiz/multiple-choice.html item=item count=forloop.index %}<br>{% endfor %}
+        </div>
+    </div>
+</div>
